@@ -12,12 +12,13 @@ class UserTest extends KernelTestCase
         $user->setLastName("Doe");
         $user->setEmail("j.doe@mail.com");
         $user->setPassword("1234");
+        $user->setRoles(["ROLE_ADMIN"]);
 
         $this->assertEquals("John",  $user->getFirstName());
         $this->assertEquals("Doe",  $user->getLastName());
         $this->assertEquals("j.doe@mail.com",  $user->getEmail());
         $this->assertEquals("j.doe@mail.com",  $user->getUserIdentifier());
-        $this->assertContains("ROLE_USER",  $user->getRoles());
+        $this->assertContains("ROLE_ADMIN",  $user->getRoles());
 
         $this->assertEquals("1234",  $user->getPassword());
     }

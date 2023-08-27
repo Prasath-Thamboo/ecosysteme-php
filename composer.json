@@ -81,6 +81,9 @@
         ],
         "test": [
             "php bin/phpunit"
+        ],
+        "test-coverage": [
+            "php bin/phpunit --coverage-html tests_coverage"
         ]
     },
     "conflict": {

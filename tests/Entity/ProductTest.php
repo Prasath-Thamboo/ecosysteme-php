@@ -11,7 +11,7 @@ class ProductTest extends KernelTestCase
         $product->setName('Jeu'); 
         $product->setPrice(10);
 
-        $this->assertEquals('JeuP', $product->getName());
+        $this->assertEquals('Jeu', $product->getName());
         $this->assertEquals(10, $product->getPrice());
 
     }
